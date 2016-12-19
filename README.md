@@ -1,2 +1,2 @@
 # Redis_COM
-StackExchage.Redis COM Interface Library
+StackExchange.Redis COM Interface Library
