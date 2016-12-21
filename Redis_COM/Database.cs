@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using System.ComponentModel;
 
 namespace StackExchange.Redis_COM
 {
     [ComVisible(true)]
     public interface IDatabase
     {
+        [Description("Set key to hold the string value. If key already holds a value, it is overwritten, regardless of its type.")]
         void StringSet(string key, string value);
+
+        [Description("Sets the given keys to their respective values. If 'not exists' is specified, this will not perform any operation at all even if just a single key already exists.")]
         string StringGet(string key);
     }
 
