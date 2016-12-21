@@ -16,6 +16,9 @@ namespace StackExchange.Redis_COM
 
         [Description("Sets the given keys to their respective values. If 'not exists' is specified, this will not perform any operation at all even if just a single key already exists.")]
         string StringGet(string key);
+
+        [Description("")]
+        bool KeyExists(string key);
     }
 
     [ComVisible(true)]
@@ -38,5 +41,11 @@ namespace StackExchange.Redis_COM
         {
             return IDatabaseInstance.StringGet(key);
         }
+
+        public bool KeyExists(string key)
+        {
+            return IDatabaseInstance.KeyExists(key);
+        }
+
     }
 }
