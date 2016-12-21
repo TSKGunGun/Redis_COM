@@ -24,7 +24,7 @@ namespace StackExchange.Redis_COM
         bool KeyDelete(string key);
 
         [Description("The number of keys that were removed.")]
-        long KeysDelete(string[] keys);
+        long KeyDelete(string[] keys);
     }
 
     [ComVisible(true)]
@@ -58,7 +58,7 @@ namespace StackExchange.Redis_COM
             return IDatabaseInstance.KeyDelete(key);
         }
 
-        public long KeysDelete(string[] keys)
+        public long KeyDelete(string[] keys)
         {
         
             Redis.RedisKey[] RedisKeys;
