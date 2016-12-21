@@ -14,7 +14,7 @@ namespace StackExchange.Redis_COM
         [Description("Set key to hold the string value. If key already holds a value, it is overwritten, regardless of its type.")]
         void StringSet(string key, string value);
 
-        [Description("Sets the given keys to their respective values. If 'not exists' is specified, this will not perform any operation at all even if just a single key already exists.")]
+        [Description("Get the value of key. If the key does not exist the special value nil is returned. An error is returned if the value stored at key is not a string, because GET only handles string values.")]
         string StringGet(string key);
 
         [Description("Returns if key exists.")]
